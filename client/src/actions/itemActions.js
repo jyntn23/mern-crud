@@ -29,6 +29,15 @@ export const deleteItem = (id) => (dispatch) => {
   );
 };
 
+export const toggleItem = (id) => (dispatch) => {
+  const stateBefore = [
+    {
+      id: id,
+      completed: false,
+    },
+  ];
+};
+
 export const setItemsLoading = () => {
   return {
     type: ITEMS_LOADING,

@@ -12,6 +12,10 @@ const ItemSchema = new Schema({
     type: Date,
     default: Date.now,
   },
+  completed: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 module.exports = Item = mongoose.model("item", ItemSchema);

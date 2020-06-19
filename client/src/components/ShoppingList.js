@@ -1,5 +1,5 @@
 import React from "react";
-import { ListGroup, ListGroupItem, Button } from "reactstrap";
+import { ListGroup, ListGroupItem, Button, Input } from "reactstrap";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { connect } from "react-redux";
 import { getItems, deleteItem } from "../actions/itemActions";
@@ -14,6 +14,10 @@ class ShoppingList extends React.Component {
     this.props.deleteItem(id);
   };
 
+  // isDone = (id) => {
+  //   this.st;
+  // };
+
   render() {
     const { items } = this.props.item;
     return (
@@ -22,6 +26,9 @@ class ShoppingList extends React.Component {
           {items.map(({ _id, name }) => (
             <CSSTransition key={_id} timeout={500} classNames="fade">
               <ListGroupItem>
+                <Input className="list-checkbox" addon type="checkbox" />
+
+                {name}
                 <Button
                   className="remove-btn"
                   color="danger"
@@ -30,7 +37,6 @@ class ShoppingList extends React.Component {
                 >
                   &times;
                 </Button>
-                {name}
               </ListGroupItem>
             </CSSTransition>
           ))}

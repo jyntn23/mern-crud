@@ -51,23 +51,23 @@ class ItemModal extends React.Component {
           style={{ margin: "2rem 0rem" }}
           onClick={this.toggle}
         >
-          Add Item
+          Add to do
         </Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle}>
-          <ModalHeader toggle={this.toggle}>Add To Shopping List</ModalHeader>
+          <ModalHeader toggle={this.toggle}>Add to do</ModalHeader>
           <ModalBody>
             <Form onSubmit={this.onSubmit}>
               <FormGroup>
-                <Label for="item">Item</Label>
+                <Label for="item">to do</Label>
                 <Input
                   type="text"
                   name="name"
                   id="item"
-                  placeholder="Add shopping item"
+                  placeholder="Add to do"
                   onChange={this.onChange}
                 />
                 <Button color="dark" style={{ marginTop: "1rem" }} block>
-                  Add Item
+                  Add
                 </Button>
               </FormGroup>
             </Form>

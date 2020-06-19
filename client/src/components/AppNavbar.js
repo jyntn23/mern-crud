@@ -13,6 +13,8 @@ import {
   DropdownItem,
   NavbarText,
 } from "reactstrap";
+import RegisterModal from "./auth/RegisterModal";
+import Logout from "./auth/Logout";
 
 const AppNavbar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,31 +24,29 @@ const AppNavbar = (props) => {
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">ShoppingList</NavbarBrand>
+        <NavbarBrand href="/">To Do List</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/">Components</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">
-                GitHub
-              </NavLink>
+              <RegisterModal />
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
                 Options
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem>Option 1</DropdownItem>
-                <DropdownItem>Option 2</DropdownItem>
+                <DropdownItem>Home Works</DropdownItem>
+                <DropdownItem>Anime</DropdownItem>
                 <DropdownItem divider />
-                <DropdownItem>Reset</DropdownItem>
+                <DropdownItem>Add List</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
+            <NavItem className="logout-btn">
+              <Logout />
+            </NavItem>
           </Nav>
-          <NavbarText>Shopping Menu</NavbarText>
+          <NavbarText>Organize your Lists</NavbarText>
         </Collapse>
       </Navbar>
     </div>
