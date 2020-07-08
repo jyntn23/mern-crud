@@ -1,4 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://jayUser:jayPassword@mernshopping-fn6pa.mongodb.net/mernShopping?retryWrites=true&w=majority",
+  "mongoURI": "mongodb+srv://jayUser:jayPassword@to-do-list-mvnjn.mongodb.net/to-do-list?retryWrites=true&w=majority",
   "jwtSecret": "tdl_myJwtSecret"
 }
